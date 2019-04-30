@@ -28,5 +28,50 @@ public class MainActivity extends AppCompatActivity {
                 resultTextView.setText(res+"");
             }
         });
+
+        Button subtractBtn = (Button) findViewById(R.id.subtractBtn);
+        subtractBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText firstNumEditTect = (EditText) findViewById(R.id.firstNumEditText);
+                EditText seNumEditTect = (EditText) findViewById(R.id.secNumEditText);
+                TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
+
+                int num1 = Integer.parseInt(firstNumEditTect.getText().toString());
+                int num2 = Integer.parseInt(seNumEditTect.getText().toString());
+                int res = num1-num2;
+                resultTextView.setText(res+"");
+            }
+        });
+
+        Button multiplyBtn = (Button) findViewById(R.id.multiplyBtn);
+        multiplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText firstNumEditTect = (EditText) findViewById(R.id.firstNumEditText);
+                EditText seNumEditTect = (EditText) findViewById(R.id.secNumEditText);
+                TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
+
+                int num1 = Integer.parseInt(firstNumEditTect.getText().toString());
+                int num2 = Integer.parseInt(seNumEditTect.getText().toString());
+                int res = num1*num2;
+                resultTextView.setText(res+"");
+            }
+        });
+
+        Button divBtn = (Button) findViewById(R.id.divBtn);
+        divBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText firstNumEditTect = (EditText) findViewById(R.id.firstNumEditText);
+                EditText seNumEditTect = (EditText) findViewById(R.id.secNumEditText);
+                TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
+
+                int num1 = Integer.parseInt(firstNumEditTect.getText().toString());
+                int num2 = Integer.parseInt(seNumEditTect.getText().toString());
+                int res = num1/num2;
+                resultTextView.setText(res+"");
+            }
+        });
     }
 }
